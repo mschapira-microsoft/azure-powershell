@@ -61,16 +61,16 @@ directive:
   - where:
       verb: Set
     remove: true
-  # Rename parameter name for New-AzDiagnosticSetting
-  - where:
-      subject: ^DiagnosticSetting$|^DiagnosticSettingsCategory$
-      parameter-name: ResourceUri
-    set:
-      parameter-name: ResourceId
   - where:
       subject: DiagnosticSettingsCategory
     set:
       subject: DiagnosticSettingCategory
+  # Rename parameter name for New-AzDiagnosticSetting
+  - where:
+      subject: ^DiagnosticSetting$|^DiagnosticSettingCategory$
+      parameter-name: ResourceUri
+    set:
+      parameter-name: ResourceId
   - where:
       subject: (DiagnosticSetting|EventCategory)(.*)
     set:

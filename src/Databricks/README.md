@@ -64,6 +64,10 @@ resourcegroup-append: true
 nested-object-to-string: true
 
 directive:
+  - where:
+     subject: OutboundNetworkDependencyEndpoint
+    set:
+     subject: OutboundNetworkDependenciesEndpoint
   # Remove cmdlet, Private link related resource should be ignored. 
   - where:
      subject: PrivateEndpointConnection|PrivateLinkResource

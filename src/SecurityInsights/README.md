@@ -126,7 +126,7 @@ directive:
       subject: Setting
   # Fix subject Names
   - where:
-      subject: EntitiesGetTimeline
+      subject: EntityGetTimeline
     set:
       subject: EntityTimeline
   - where:

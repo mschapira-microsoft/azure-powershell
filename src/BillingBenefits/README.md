@@ -66,11 +66,43 @@ directive:
 
   ### Rename Cmdlet names
   - where:
-      verb: Get
       subject: SavingPlan
     set:
+      subject: SavingsPlan
+  - where:
+      subject: SavingsPlan
+      parameter-name: SavingsPlanOrderId
+    set:
+      alias: OrderId
+  - where:
+      subject: SavingsPlan
+      parameter-name: SavingsPlanId
+    set:
+      alias: Id
+  - where:
       verb: Get
+      variant: List1
+      subject: SavingsPlan
+    set:
       subject: SavingsPlanList
+  - where:
+      subject: SavingPlanOrder
+    set:
+      subject: SavingsPlanOrder
+  - where:
+      subject: SavingsPlanOrder
+      parameter-name: SavingsPlanOrderId
+    set:
+      alias: Id
+  - where:
+      subject: SavingPlanOrderAlias
+    set:
+      subject: SavingsPlanOrderAlias
+  - where:
+      subject: SavingsPlanOrderAlias
+      parameter-name: SavingsPlanOrderAliasName
+    set:
+      alias: Name
   - where:
       verb: Test
       subject: Purchase

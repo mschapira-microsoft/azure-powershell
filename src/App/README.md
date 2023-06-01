@@ -101,10 +101,6 @@ directive:
     remove: true
   - where:
       verb: Get
-      subject: ContainerAppAuthConfig
-    remove: true
-  - where:
-      verb: Get
       subject: ContainerAppSourceControl
     remove: true
   - where:
@@ -123,16 +119,6 @@ directive:
     set:
       verb: Disable
       subject: ContainerAppRevision
-  - where:
-      verb: Get
-      subject: ContainerAppsAuthConfig
-    set:
-      subject: ContainerAppAuthConfig
-  - where:
-      verb: Remove
-      subject: ContainerAppsAuthConfig
-    set:
-      subject: ContainerAppAuthConfig
   - where:
       verb: Get
       subject: ContainerAppsSourceControl

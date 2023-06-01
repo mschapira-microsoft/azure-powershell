@@ -101,6 +101,11 @@ directive:
     - ProtectionContainerMappingProviderSpecificDetails
     - MigrateProjectProperties
     - FabricProperties
+  # rename subject from ReplicationRecoveryServiceProvider to ReplicationRecoveryServicesProvider to avoid breaking changes
+    where:
+      subject: ReplicationRecoveryServiceProvider
+    set:
+      subject: ReplicationRecoveryServicesProvider
   # Remove variants not in scope
   - from: Microsoft.RecoveryServices/stable/2022-05-01/service.json
     where:
